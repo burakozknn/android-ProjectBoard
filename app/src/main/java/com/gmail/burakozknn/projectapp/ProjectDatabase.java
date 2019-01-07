@@ -10,7 +10,7 @@ import android.support.annotation.NonNull;
 
 import java.security.Policy;
 
-@Database(entities = {Project.class}, version = 1)
+@Database(entities = {Project.class}, version = 2)
 public abstract class ProjectDatabase extends RoomDatabase {
 
     private static ProjectDatabase instance;
@@ -51,8 +51,8 @@ public abstract class ProjectDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            projectDao.insert(new Project("Android",40));
-            projectDao.insert(new Project("IOS",20));
+            projectDao.insert(new Project("Android","a",40));
+            projectDao.insert(new Project("IOS","b",20));
 
             return null;
         }
