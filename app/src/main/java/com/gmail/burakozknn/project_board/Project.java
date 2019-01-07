@@ -1,9 +1,7 @@
-package com.gmail.burakozknn.projectapp;
+package com.gmail.burakozknn.project_board;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
-
-import java.util.UUID;
 
 @Entity(tableName = "project_table")
 public class Project {
@@ -23,6 +21,10 @@ public class Project {
         this.price = price;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public int getId() {
         return id;
     }
@@ -38,9 +40,4 @@ public class Project {
     public int getPrice() {
         return price;
     }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
 }

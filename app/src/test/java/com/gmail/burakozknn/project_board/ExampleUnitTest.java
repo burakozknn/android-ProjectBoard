@@ -1,4 +1,4 @@
-package com.gmail.burakozknn.projectapp;
+package com.gmail.burakozknn.project_board;
 
 import org.junit.Test;
 

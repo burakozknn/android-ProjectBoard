@@ -1,5 +1,4 @@
-package com.gmail.burakozknn.projectapp;
-
+package com.gmail.burakozknn.project_board;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
@@ -23,14 +22,8 @@ public interface ProjectDao {
     void delete(Project project);
 
     @Query("DELETE FROM project_table")
-    void deleteAllNotes();
+    void deleteAllProjects();
 
     @Query("SELECT * FROM project_table ORDER BY id DESC")
     LiveData<List<Project>> getAllProjects();
-
-
-
-
-
-
 }

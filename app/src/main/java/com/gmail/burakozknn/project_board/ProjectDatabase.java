@@ -1,4 +1,4 @@
-package com.gmail.burakozknn.projectapp;
+package com.gmail.burakozknn.project_board;
 
 import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
@@ -8,9 +8,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 
-import java.security.Policy;
-
-@Database(entities = {Project.class}, version = 2)
+@Database(entities = {Project.class},version = 1,exportSchema = false)
 public abstract class ProjectDatabase extends RoomDatabase {
 
     private static ProjectDatabase instance;
@@ -19,8 +17,7 @@ public abstract class ProjectDatabase extends RoomDatabase {
 
     public static synchronized ProjectDatabase getInstance(Context context) {
 
-        if(instance==null) {
-
+        if(instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(),
                     ProjectDatabase.class,"project_database")
                     .fallbackToDestructiveMigration()
@@ -29,10 +26,11 @@ public abstract class ProjectDatabase extends RoomDatabase {
 
         }
         return instance;
-
     }
 
-    private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback() {
+
+    private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback(){
+
 
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
@@ -51,9 +49,7 @@ public abstract class ProjectDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            projectDao.insert(new Project("Android","a",40));
-            projectDao.insert(new Project("IOS","b",20));
-
+            projectDao.insert(new Project("Android","Google",48));
             return null;
         }
     }

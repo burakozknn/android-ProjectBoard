@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">ProjectApp</string>
+    <string name="app_name">PBoard</string>
 
     <string name="budget">Budget: $</string>
-
-
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="projectid">ProjectId:</string>
+    <string name="contact">Contact:</string>
 </resources>

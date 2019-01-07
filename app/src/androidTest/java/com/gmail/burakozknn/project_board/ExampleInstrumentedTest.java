@@ -1,4 +1,4 @@
-package com.gmail.burakozknn.projectapp;
+package com.gmail.burakozknn.project_board;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.gmail.burakozknn.projectapp", appContext.getPackageName());
+        assertEquals("com.gmail.burakozknn.project_board", appContext.getPackageName());
     }
 }

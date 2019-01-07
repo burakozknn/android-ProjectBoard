@@ -1,4 +1,4 @@
-package com.gmail.burakozknn.projectapp;
+package com.gmail.burakozknn.project_board;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
@@ -8,17 +8,13 @@ import android.support.annotation.NonNull;
 import java.util.List;
 
 public class ProjectViewModel extends AndroidViewModel {
-
     private ProjectRepository repository;
-
     private LiveData<List<Project>> allProjects;
 
     public ProjectViewModel(@NonNull Application application) {
         super(application);
-
         repository = new ProjectRepository(application);
         allProjects = repository.getAllProjects();
-
     }
 
     public void insert(Project project) {
@@ -34,7 +30,7 @@ public class ProjectViewModel extends AndroidViewModel {
     }
 
     public void deleteAllProjects() {
-        repository.deleteAllProjets();
+        repository.deleteAllProjects();
     }
 
     public LiveData<List<Project>> getAllProjects() {

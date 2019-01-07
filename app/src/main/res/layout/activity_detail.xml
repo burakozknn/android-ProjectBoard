@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".DetailActivity">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        />
+
+    <TextView
+        android:id="@+id/textTitleDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTitle"
+        android:text="results"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+       />
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTitleDetails"
+        android:text="@string/description"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        />
+
+    <TextView
+        android:id="@+id/textDescriptionDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textDescription"
+        android:text="results"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        />
+
+    <TextView
+        android:id="@+id/textBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textDescriptionDetails"
+        android:text="@string/budget"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        />
+
+    <TextView
+        android:id="@+id/textBudgetDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textDescriptionDetails"
+        android:layout_toRightOf="@+id/textBudget"
+        android:text="results"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        />
+
+    <TextView
+        android:id="@+id/textContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textBudget"
+        android:text="@string/contact"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        />
+
+    <TextView
+        android:id="@+id/textContactDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textBudgetDetails"
+        android:layout_toRightOf="@+id/textBudget"
+        android:text="results"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        />
+
+    <TextView
+        android:id="@+id/textId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/projectid"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        />
+
+
+
+    <TextView
+        android:id="@+id/textIdDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textId"
+        android:layout_marginTop="50dp"
+        android:text="results"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        />
+
+</RelativeLayout>

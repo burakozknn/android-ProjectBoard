@@ -5,18 +5,23 @@
     android:layout_height="wrap_content"
     android:layout_marginEnd="8dp"
     android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp">
+    android:layout_marginTop="8dp"
+    >
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#fffdee"
         android:padding="8dp">
 
         <TextView
             android:id="@+id/text_view_title"
+            android:textColor="#4DB6AC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title"
+            android:fontFamily="casual"
+            android:textStyle="bold"
             android:maxLines="1"
             android:ellipsize="end"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
@@ -26,14 +31,20 @@
             android:id="@+id/text_view_budget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="serif-monospace"
+            android:textColor="#00838F"
             android:layout_below="@+id/text_view_title"
-            android:text=""
+            android:text="@string/budget"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
 
         <TextView
             android:id="@+id/text_view_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="serif-monospace"
+            android:textColor="#00838F"
             android:layout_toRightOf="@id/text_view_budget"
             android:layout_below="@+id/text_view_title"
             android:text="Price"

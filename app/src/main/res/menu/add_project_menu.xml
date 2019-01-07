@@ -4,9 +4,8 @@
 
     <item
         android:id="@+id/save_project"
+        android:title="Save"
         android:icon="@drawable/ic_save"
-        app:showAsAction="ifRoom"
-        android:title="save" />
-
+        app:showAsAction="ifRoom" />
 
 </menu>
