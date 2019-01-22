@@ -6,4 +6,5 @@
     <string name="description">Description</string>
     <string name="projectid">ProjectId:</string>
     <string name="contact">Contact:</string>
+    <string name="post">POST</string>
 </resources>

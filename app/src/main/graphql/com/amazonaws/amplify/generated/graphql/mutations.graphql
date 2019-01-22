@@ -1,0 +1,25 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateProject($input: CreateProjectInput!) {
+  createProject(input: $input) {
+    id
+    title
+    description
+    price
+  }
+}
+mutation UpdateProject($input: UpdateProjectInput!) {
+  updateProject(input: $input) {
+    id
+    title
+    description
+    price
+  }
+}
+mutation DeleteProject($input: DeleteProjectInput!) {
+  deleteProject(input: $input) {
+    id
+    title
+    description
+    price
+  }
+}

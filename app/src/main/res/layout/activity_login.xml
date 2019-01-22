@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    android:background="#FFFFFF"
+    tools:context=".view.LoginActivity"
     >
 
 
@@ -16,19 +17,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".LoginActivity">
+        tools:context=".view.LoginActivity">
 
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="5dp"
+            android:background="@mipmap/login"
             android:text="This is the Login Screen" />
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp">
+            android:layout_margin="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -49,7 +51,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="text"
-                    android:lines="1" />
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
 
             </TableRow>
 
@@ -89,18 +92,24 @@
                 android:id="@+id/registerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#F44336"
+                android:background="#ECEFF1"
                 android:text="Register" />
 
             <TableRow>
 
                 <Button
                     android:id="@+id/confirmButton"
+                    android:textColor="#F44336"
+                    android:layout_marginTop="5dp"
+                    android:background="#ECEFF1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="confirm" />
 
                 <EditText
                     android:id="@+id/confirmationCode"
+                    android:layout_marginTop="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -157,9 +166,16 @@
                 android:id="@+id/loginButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#F44336"
+                android:background="#ECEFF1"
                 android:text="Login" />
 
+
         </TableLayout>
+
+
+
 
     </LinearLayout>
 

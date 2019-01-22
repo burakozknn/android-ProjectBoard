@@ -1,0 +1,116 @@
+type Project {
+  id: Int!
+  title: String!
+  description: String!
+  price: Int
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelProjectConnection {
+  items: [Project]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelProjectFilterInput {
+  id: ModelIntFilterInput
+  title: ModelStringFilterInput
+  description: ModelStringFilterInput
+  price: ModelIntFilterInput
+  and: [ModelProjectFilterInput]
+  or: [ModelProjectFilterInput]
+  not: ModelProjectFilterInput
+}
+
+type Query {
+  getProject(id: ID!): Project
+  listProjects(filter: ModelProjectFilterInput, limit: Int, nextToken: String): ModelProjectConnection
+}
+
+input CreateProjectInput {
+  id: ID
+  title: String!
+  description: String!
+  price: Int
+}
+
+input UpdateProjectInput {
+  id: Int!
+  title: String
+  description: String
+  price: Int
+}
+
+input DeleteProjectInput {
+  id: ID
+}
+
+type Mutation {
+  createProject(input: CreateProjectInput!): Project
+  updateProject(input: UpdateProjectInput!): Project
+  deleteProject(input: DeleteProjectInput!): Project
+}
+
+type Subscription {
+  onCreateProject: Project @aws_subscribe(mutations: ["createProject"])
+  onUpdateProject: Project @aws_subscribe(mutations: ["updateProject"])
+  onDeleteProject: Project @aws_subscribe(mutations: ["deleteProject"])
+}

@@ -36,7 +36,6 @@ import org.json.JSONObject;
  */
 @SuppressWarnings("unused")
 public class AWSLoginModel {
-
     // constants
     private final String ATTR_EMAIL = "email";
     private static final String SHARED_PREFERENCE = "SavedValues";
@@ -50,12 +49,14 @@ public class AWSLoginModel {
     private AWSLoginHandler mCallback;
 
     // control variables
-    private String userName, userPassword;
-    private Context mContext;
-    private CognitoUserPool mCognitoUserPool;
-    private CognitoUser mCognitoUser;
+    public String userName, userPassword;
+    public Context mContext;
+    public CognitoUserPool mCognitoUserPool;
+    public CognitoUser mCognitoUser;
 
-    private final AuthenticationHandler authenticationHandler = new AuthenticationHandler() {
+
+
+    public AuthenticationHandler authenticationHandler = new AuthenticationHandler() {
         @Override
         public void onSuccess(CognitoUserSession userSession, CognitoDevice newDevice) {
             // Get details of the logged user (in this case, only the e-mail)
@@ -105,6 +106,10 @@ public class AWSLoginModel {
             mCallback.onFailure(PROCESS_SIGN_IN, exception);
         }
     };
+
+
+
+
 
 
     /**
@@ -222,5 +227,4 @@ public class AWSLoginModel {
         SharedPreferences savedValues = context.getSharedPreferences(SHARED_PREFERENCE, Context.MODE_PRIVATE);
         return savedValues.getString(PREFERENCE_USER_EMAIL, "");
     }
-
 }

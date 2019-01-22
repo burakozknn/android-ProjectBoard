@@ -1,0 +1,25 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateProject {
+  onCreateProject {
+    id
+    title
+    description
+    price
+  }
+}
+subscription OnUpdateProject {
+  onUpdateProject {
+    id
+    title
+    description
+    price
+  }
+}
+subscription OnDeleteProject {
+  onDeleteProject {
+    id
+    title
+    description
+    price
+  }
+}

@@ -11,12 +11,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#fffdee"
+        android:background="#FFF3FAFC"
         android:padding="8dp">
 
         <TextView
             android:id="@+id/text_view_title"
-            android:textColor="#4DB6AC"
+            android:textColor="#f44336"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:fontFamily="serif-monospace"
-            android:textColor="#00838F"
+            android:textColor="#f44336"
             android:layout_below="@+id/text_view_title"
             android:text="@string/budget"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:fontFamily="serif-monospace"
-            android:textColor="#00838F"
+            android:textColor="#f44336"
             android:layout_toRightOf="@id/text_view_budget"
             android:layout_below="@+id/text_view_title"
             android:text="Price"

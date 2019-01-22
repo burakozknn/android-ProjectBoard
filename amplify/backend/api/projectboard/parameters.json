@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "projectboard",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcognitocb8a26ec",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "schemaGraphql": "s3://rojectoard-20190111023701-deployment/amplify-appsync-files/schema.graphql.1547193122259",
+    "ResolverBucket": "rojectoard-20190111023701-deployment",
+    "ResolverRootKey": "amplify-appsync-files",
+    "DeploymentTimestamp": "1547193122259"
+}
